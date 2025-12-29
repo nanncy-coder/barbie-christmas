@@ -72,4 +72,5 @@ by Nanncy Keller
 
 ---
 
-**Live Demo:** https://nanncy-coder.github.io/barbie-christmas/
+## Live Demo
+[Barbie Christmas Tale](https://nanncy-coder.github.io/barbie-christmas/) 🎄✨
