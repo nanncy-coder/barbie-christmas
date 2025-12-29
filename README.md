@@ -1,3 +1,8 @@
+<div align="center">
+  <img src="pictures/star.png" alt="Barbie’s Christmas Tale" - Preview" width="40%"/>
+  <br><br>
+</div>
+
 # 🎄 Barbie’s Christmas Tale ✨
 
 Welcome to **Barbie’s Christmas Tale**, a magical and interactive holiday web experience inspired by Barbie’s world of pink sparkle, belief, and Christmas magic.  
