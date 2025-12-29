@@ -29,7 +29,7 @@ Step into a heartwarming story about the legendary **Pink Comet** that makes imp
 
 ## 📂 Project Structure
 
-- barbie-christmas-tale/
+- barbie-christmas/
   - index.html
   - style.css
   - script.js
@@ -37,7 +37,7 @@ Step into a heartwarming story about the legendary **Pink Comet** that makes imp
     - background02.jpg  
     - barbie.png  
     - santa.png  
-    - comet.png  
+    - comet.png...  
   - songs/
     - song.mp3
       
