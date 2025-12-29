@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('pictures/background02.jpg') no-repeat top center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+    padding-top: 0; /* Removido padding do body */
+    cursor: default;
+    display: flex; /* Adicionado */
+    flex-direction: column; /* Adicionado */
+    min-height: 100vh; /* Adicionado */
+}
+
+.content-wrapper {
+    flex-grow: 1; 
+    padding-top: 160px; 
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+        rgba(255,182,193,0.5) 0%,
+        rgba(255,0,0,0.4) 50%,
+        rgba(0,128,0,0.0) 100%);
+    z-index: -1;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #fff;
+    z-index: 1000;
+}
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: #ff69b4;
+    text-shadow: 2px 2px 5px #900;
+}
+header .menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+    animation: shine 2s infinite;
+}
+@keyframes shine {
+    0%, 100% {
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px #FF0000,
+                     0 0 20px #990000;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff,
+                     0 0 20px #FF0000,
+                     0 0 30px #990000;
+    }
+}
+#magic-btn, #go-ahead-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 35px;
+    font-size: 1.3em;
+    color: #fff;
+    background: linear-gradient(45deg, #ff7f7f, #ff0000, #990000);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+#magic-btn:hover, #go-ahead-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #fff;
+}
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
+    scroll-margin-top: 160px; /* CORREÇÃO: Garante que o scroll pare abaixo do header fixo */
+}
+section h2 {
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 2em;
+    font-family: 'Mountains of Christmas', cursive;
+    color: #cc0000;
+    text-shadow: 0 0 4px #ffd966, 0 0 6px #ffe680;
+}
+section h2.subtitulo {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+section p {
+    text-align: center;
+    line-height: 1.6;
+    color: #ffffff;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.3em;
+    text-shadow:
+        2px 2px 6px rgba(0, 0, 0, 0.8),
+        0 0 10px rgba(0, 0, 0, 0.6);
+}
+.main-image {
+    display: block;
+    margin: 40px auto;
+    width: 300px;
+    max-width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #fff;
+    transition: transform 0.3s, filter 0.3s;
+}
+.main-image:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+.general-photo {
+    width: 280px;
+    max-width: 90%;
+    display: block;
+    margin: 35px auto;
+    border-radius: 18px;
+    box-shadow: 0 0 25px #ffffff;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+    justify-content: center;
+}
+.gallery img {
+    width: 220px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+#santa-train {
+    position: fixed;
+    top: 50%;
+    left: -350px;
+    width: 300px;
+    z-index: 1000;
+    display: none;
+    transform: translateY(-50%);
+}
+#santa-header {
+    position: fixed;
+    top: 20px;
+    left: -150px;
+    width: 300px;
+    z-index: 2000;
+    display: none;
+    transform: rotate(0deg);
+}
+@keyframes santa-move {
+    0% { left: -350px; }
+    100% { left: 100vw; }
+}
+@keyframes santa-fly {
+    0% {
+        left: -150px;
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        left: 100vw;
+        transform: rotate(-10deg);
+    }
+}
+footer {
+    text-align: center;
+    padding: 15px 20px;
+    background: linear-gradient(to right,
+        rgba(255,127,127,0.8),
+        rgba(255,0,0,0.8),
+        rgba(153,0,0,0.8));
+    color: #fff;
+    font-size: 14px;
+}
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: #fff;
+    font-size: 1em;
+    user-select: none;
+    pointer-events: none;
+    z-index: 9999;
+    animation-name: fall;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.7;
+    }
+}
+@keyframes star-move {
+    0% {
+        right: -100px;
+        opacity: 1;
+    }
+    100% {
+        right: 100vw;
+        opacity: 1;
+    }
+}
+.friends-image {
+    width: 250px;
+    max-width: 90%;
+    display: block;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #fff;
+}
+/* Galeria das caixinhas */
+.gift-gallery {
+    display: flex; /* Mudar para Flexbox */
+    flex-wrap: wrap; /* Permitir que os itens quebrem para a próxima linha */
+    justify-content: center; /* CENTRALIZA os itens na linha horizontalmente */
+    gap: 25px;
+    margin-top: 20px;
+}
+.gift-box {
+    width: 160px;
+    height: 160px;
+    background: #ff69b4;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+.gift-box:hover {
+    transform: scale(1.05);
+}
+.gift-lid {
+    width: 100%;
+    height: 40px;
+    background: #ffc0cb;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    transition: transform 0.5s ease;
+    box-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+.gift-content {
+    opacity: 0;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.1em;
+    margin-top: 60px;
+    transition: opacity 0.5s ease;
+    text-shadow: 1px 1px 3px #000;
+}
+.gift-box.open .gift-lid {
+    transform: translateY(-45px) rotateX(70deg);
+}
+.gift-box.open .gift-content {
+    opacity: 1;
+}
