@@ -74,3 +74,7 @@ by Nanncy Keller
 
 ## Live Demo
 [Barbie Christmas Tale](https://nanncy-coder.github.io/barbie-christmas/) 🎄✨
+
+---
+
+Versão em português: [Leia o README em PT](README-pt.md)
